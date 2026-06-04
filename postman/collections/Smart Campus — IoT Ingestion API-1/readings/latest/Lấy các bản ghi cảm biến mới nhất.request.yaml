@@ -1,0 +1,14 @@
+$kind: http-request
+description: Trả về danh sách bản ghi mới nhất, có thể lọc theo thiết bị và giới hạn số dòng.
+url: "{{baseUrl}}/readings/latest?device_id=<string>&limit=10"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  device_id: <string>
+  limit: "10"
+body:
+  type: text
+  content: ""
+examples: ./.resources/Lấy các bản ghi cảm biến mới nhất.resources/examples
+order: 1000

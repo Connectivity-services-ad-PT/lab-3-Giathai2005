@@ -1,0 +1,38 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/readings"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Accept
+      value: application/problem+json
+    - key: Authorization
+      value: Bearer <token>
+      description: "Added as a part of security scheme: bearer"
+  body:
+    type: json
+    content: |-
+      {
+        "device_id": "<string>",
+        "metric": "temperature",
+        "value": "<number>",
+        "timestamp": "<dateTime>",
+        "unit": "boolean"
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: application/problem+json
+  body:
+    type: json
+    content: |-
+      {
+        "type": "<uri>",
+        "title": "<string>",
+        "status": "<integer>",
+        "detail": "<string>",
+        "instance": "<string>"
+      }
+order: 2000
