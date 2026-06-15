@@ -1,8 +1,7 @@
 $kind: collection
-<<<<<<< HEAD
+
 name: FIT4110 Lab03 - IoT Ingestion Contract Tests
-=======
->>>>>>> 41e6a9f53901f90e39dea10bbc834c877ebaff18
+
 description: "Postman Collection mẫu cho Buổi 3: Mock Server, provider-side tests, consumer-side smoke tests và Newman evidence. Cấu trúc folder bám theo bài giảng: Functional, Auth, Negative, Boundary/Reliability, Consumer-side và Local-only."
 scripts:
   - type: http:beforeRequest

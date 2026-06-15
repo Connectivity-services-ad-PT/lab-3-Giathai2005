@@ -26,8 +26,7 @@ scripts:
         pm.expect(json).to.have.property('metric', 'temperature');
         pm.expect(json).to.have.property('accepted', true);
       });
-<<<<<<< HEAD
-=======
+
 
       pm.test("Status code is 201", function () {
           pm.response.to.have.status(201);
@@ -46,6 +45,6 @@ scripts:
 
           pm.expect(json.accepted).to.eql(true);
       });
->>>>>>> 41e6a9f53901f90e39dea10bbc834c877ebaff18
+
     language: text/javascript
 order: 1000
