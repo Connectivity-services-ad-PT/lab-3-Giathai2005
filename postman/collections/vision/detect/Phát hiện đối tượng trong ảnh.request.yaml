@@ -1,0 +1,16 @@
+$kind: http-request
+description: Endpoint mock tối thiểu để consumer kiểm tra luồng Camera/Core gọi AI Vision.
+url: "{{baseUrl}}/detect"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "camera_id": "CAM01",
+      "image_url": "https://example.com/frame.jpg"
+    }
+examples: ./.resources/Phát hiện đối tượng trong ảnh.resources/examples
+order: 1000

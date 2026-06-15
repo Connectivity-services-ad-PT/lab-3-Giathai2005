@@ -1,0 +1,35 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/detect"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Accept
+      value: application/problem+json
+    - key: Authorization
+      value: Bearer <token>
+      description: "Added as a part of security scheme: bearer"
+  body:
+    type: json
+    content: |-
+      {
+        "camera_id": "CAM01",
+        "image_url": "https://example.com/frame.jpg"
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: application/problem+json
+  body:
+    type: json
+    content: |-
+      {
+        "type": "https://smart-campus.local/problems/invalid-image",
+        "title": "Invalid image",
+        "status": 400,
+        "detail": "image_url or image_base64 is required",
+        "instance": "/detect"
+      }
+order: 2000

@@ -1,0 +1,13 @@
+$kind: collection
+name: vision
+description: |
+  Contract mock tối thiểu cho consumer-side smoke test trong FIT4110 Lab 03.
+  File này giúp Camera Stream hoặc Core Business gọi thử AI Vision khi service thật chưa hoàn thiện.
+variables:
+  baseUrl: http://localhost:4011
+auth:
+  - id: 4c454a30-da60-4573-916e-96cfda4ec128
+    type: bearer
+    name: bearer auth
+    credentials:
+      token: "{{bearerToken}}"

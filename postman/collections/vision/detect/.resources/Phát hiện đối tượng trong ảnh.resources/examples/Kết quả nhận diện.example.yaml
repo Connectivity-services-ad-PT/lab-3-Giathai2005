@@ -1,0 +1,35 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/detect"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Accept
+      value: application/json
+    - key: Authorization
+      value: Bearer <token>
+      description: "Added as a part of security scheme: bearer"
+  body:
+    type: json
+    content: |-
+      {
+        "camera_id": "CAM01",
+        "image_url": "https://example.com/frame.jpg"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "detection_id": "DET001",
+        "camera_id": "CAM01",
+        "label": "person",
+        "confidence": 0.91,
+        "risk_level": "medium"
+      }
+order: 1000

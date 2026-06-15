@@ -1,0 +1,8 @@
+name: mock
+values:
+  - key: baseUrl
+    value: ''
+  - key: authToken
+    value: ''
+  - key: env
+    value: ''

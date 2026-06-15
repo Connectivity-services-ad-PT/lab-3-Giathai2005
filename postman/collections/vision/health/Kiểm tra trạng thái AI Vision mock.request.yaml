@@ -1,0 +1,8 @@
+$kind: http-request
+description: Public health check dùng để kiểm tra mock AI Vision đã sẵn sàng.
+url: "{{baseUrl}}/health"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/Kiểm tra trạng thái AI Vision mock.resources/examples
+order: 1000

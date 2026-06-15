@@ -1,0 +1,6 @@
+name: mock
+values:
+  - key: baseUrl
+    value: 'http://localhost:4011'
+  - key: authToken
+    value: lab-token

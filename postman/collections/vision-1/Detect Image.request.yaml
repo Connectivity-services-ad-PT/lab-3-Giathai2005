@@ -1,0 +1,21 @@
+$kind: http-request
+url: "{{baseUrl}}/detect"
+method: POST
+headers:
+  Content-Type: application/json
+  Authorization: Bearer {{authToken}}
+body:
+  type: text
+  content: |-
+    {
+      "camera_id": "CAM01",
+      "image_url": "https://example.com/a.jpg"
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Detect API returns valid status', function () {
+          pm.expect([200,401]).to.include(pm.response.code);
+      });
+    language: text/javascript
+order: 2000
