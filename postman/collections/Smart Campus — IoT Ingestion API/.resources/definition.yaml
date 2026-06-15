@@ -1,0 +1,17 @@
+$kind: collection
+description: |-
+  Contract mẫu dùng cho FIT4110 Lab 03 — Postman, Mock Server và Contract Testing.
+  Sinh viên có thể thay thế file này bằng openapi.yaml của service nhóm mình từ Lab 02.
+
+
+  Contact Support:
+   Name: Team IoT
+   Email: iot@example.com
+variables:
+  baseUrl: http://localhost:4010
+auth:
+  - id: 665a03e8-0600-479c-a191-9824dfce68ea
+    type: bearer
+    name: bearer auth
+    credentials:
+      token: "{{bearerToken}}"

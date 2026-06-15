@@ -1,0 +1,39 @@
+$kind: http-example
+name: Thiết bị gửi dữ liệu quá nhiều trong thời gian ngắn
+request:
+  url: "{{baseUrl}}/readings"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Accept
+      value: application/problem+json
+    - key: Authorization
+      value: Bearer <token>
+      description: "Added as a part of security scheme: bearer"
+  body:
+    type: json
+    content: |-
+      {
+        "device_id": "<string>",
+        "metric": "temperature",
+        "value": "<number>",
+        "timestamp": "<dateTime>",
+        "unit": "boolean"
+      }
+response:
+  statusCode: 429
+  statusText: Too Many Requests
+  headers:
+    Content-Type: application/problem+json
+  body:
+    type: json
+    content: |-
+      {
+        "type": "<uri>",
+        "title": "<string>",
+        "status": "<integer>",
+        "detail": "<string>",
+        "instance": "<string>"
+      }
+order: 4000

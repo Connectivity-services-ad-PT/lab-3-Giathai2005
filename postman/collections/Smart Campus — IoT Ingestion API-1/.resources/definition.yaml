@@ -1,0 +1,18 @@
+$kind: collection
+name: Smart Campus — IoT Ingestion API
+description: |-
+  Contract mẫu dùng cho FIT4110 Lab 03 — Postman, Mock Server và Contract Testing.
+  Sinh viên có thể thay thế file này bằng openapi.yaml của service nhóm mình từ Lab 02.
+
+
+  Contact Support:
+   Name: Team IoT
+   Email: iot@example.com
+variables:
+  baseUrl: http://localhost:4010
+auth:
+  - id: 73e31f0c-a748-4af7-ab4f-19e1294a1eb0
+    type: bearer
+    name: bearer auth
+    credentials:
+      token: "{{bearerToken}}"

@@ -1,0 +1,23 @@
+$kind: http-request
+description: |
+  Endpoint nhận telemetry từ ESP32 hoặc gateway.
+  Request phải có device_id, metric, value và timestamp.
+  Trong lab này, ví dụ boundary dùng nhiệt độ hợp lệ từ -40 đến 80.
+  Các nhóm có thể điều chỉnh miền giá trị theo service thật của mình.
+url: "{{baseUrl}}/readings"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "device_id": "<string>",
+      "metric": "temperature",
+      "value": "<number>",
+      "timestamp": "<dateTime>",
+      "unit": "boolean"
+    }
+examples: ./.resources/Gửi một bản ghi cảm biến từ thiết bị IoT.resources/examples
+order: 1000

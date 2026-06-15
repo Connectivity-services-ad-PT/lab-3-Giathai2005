@@ -1,0 +1,19 @@
+# Use this workspace to collaborate
+workspace:
+  id: 41b9c8eb-3138-496a-85ef-f4bfeeba8bf4
+
+localResources:
+  specs:
+    - ..\contracts\ai-vision.openapi.yaml
+    - ..\contracts\iot-ingestion.openapi.yaml
+    - ..\postman\specs\Smart Campus — IoT Ingestion
+      API\iot-ingestion.openapi.yaml
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ..\postman\collections\Smart Campus — IoT Ingestion API: f75572ff-c5ae-4642-bcd2-06286b2e40f4
+    ..\postman\collections\Smart Campus — IoT Ingestion API Copy: f9a7923c-2d03-4d37-a367-e50cb80b86f5
+    ..\postman\collections\FIT4110 Lab03 - IoT Ingestion Contract Tests: fit4110-lab03-iot-ingestion
+    ..\postman\collections\Smart Campus — IoT Ingestion API-1: 278028a9-9d34-4916-a1ac-9de6272a55c7

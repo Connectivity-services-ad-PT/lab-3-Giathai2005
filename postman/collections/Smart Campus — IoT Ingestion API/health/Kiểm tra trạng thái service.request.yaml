@@ -1,0 +1,8 @@
+$kind: http-request
+description: Public health check dùng để kiểm tra mock/service đã sẵn sàng.
+url: "{{baseUrl}}/health"
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/Kiểm tra trạng thái service.resources/examples
+order: 1000

@@ -5,6 +5,13 @@ info:
   description: |
     Contract mẫu dùng cho FIT4110 Lab 03 — Postman, Mock Server và Contract Testing.
     Sinh viên có thể thay thế file này bằng openapi.yaml của service nhóm mình từ Lab 02.
+<<<<<<< HEAD
+=======
+
+  contact:
+    name: Team IoT
+    email: iot@example.com
+>>>>>>> 41e6a9f53901f90e39dea10bbc834c877ebaff18
 servers:
   - url: http://localhost:4010
     description: Prism mock server

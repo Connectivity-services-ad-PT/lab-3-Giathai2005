@@ -1,0 +1,39 @@
+$kind: http-example
+name: Thiết bị gửi dữ liệu quá nhiều trong thời gian ngắn
+request:
+  url: "{{baseUrl}}/readings"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Accept
+      value: application/problem+json
+    - key: Authorization
+      value: Bearer <token>
+      description: "Added as a part of security scheme: bearer"
+  body:
+    type: json
+    content: |-
+      {
+        "device_id": "ESP32-LAB-A01",
+        "metric": "temperature",
+        "value": 31.5,
+        "unit": "celsius",
+        "timestamp": "2026-05-13T08:30:00+07:00"
+      }
+response:
+  statusCode: 429
+  statusText: Too Many Requests
+  headers:
+    Content-Type: application/problem+json
+  body:
+    type: json
+    content: |-
+      {
+        "type": "https://smart-campus.local/problems/rate-limited",
+        "title": "Too Many Requests",
+        "status": 429,
+        "detail": "Device exceeded allowed telemetry rate",
+        "instance": "/readings"
+      }
+order: 4000
